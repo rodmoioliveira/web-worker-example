@@ -1,6 +1,6 @@
 const fibNum = 43;
-const result = () => document.getElementById('result');
-const clicks = () => document.getElementById('click');
+const result = () => document.getElementById("result");
+const clicks = () => document.getElementById("click");
 
 const fibonacci = (n) => {
   if (n <= 1) {
@@ -15,7 +15,7 @@ const inc = () => {
 };
 
 const clickEv = () => {
-  document.addEventListener('click', inc);
+  document.addEventListener("click", inc);
 };
 
 const noWebWorker = () => {
@@ -30,7 +30,7 @@ const webWorker = () => {
     return;
   }
 
-  const myWorker = new Worker('worker.js');
+  const myWorker = new Worker("worker.js");
   myWorker.postMessage(fibNum);
   myWorker.onmessage = (e) => {
     const r = result();
